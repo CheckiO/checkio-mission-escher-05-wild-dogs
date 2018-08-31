@@ -1,0 +1,16 @@
+"use strict";
+
+function wildDogs(coords) {
+    // your code here
+    return 0;
+}
+
+var assert = require('assert');
+if (!global.is_checking) {
+    console.log('Example:')
+    console.log(wildDogs([[7, 122], [8, 139], [9, 156], [10, 173], [11, 190], [-100, 1]]))
+
+    // These "asserts" are used for self-checking and not for an auto-testing
+    assert.equal(wildDogs([[7, 122], [8, 139], [9, 156], [10, 173], [11, 190], [-100, 1]]), 3)
+    console.log("Coding complete? Click 'Check' to earn cool rewards!");
+}
