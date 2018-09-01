@@ -4,8 +4,10 @@ def wild_dogs(coords):
 
 if __name__ == '__main__':
     print("Example:")
-    print(wild_dogs([(7, 122), (8, 139), (9, 156), (10, 173), (11, 190), (-100, 1)]))
+    print(wild_dogs([(7, 122), (8, 139), (9, 156), 
+                     (10, 173), (11, 190), (-100, 1)]))
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
-    assert wild_dogs([(7, 122), (8, 139), (9, 156), (10, 173), (11, 190), (-100, 1)]) == 3
+    assert wild_dogs([(7, 122), (8, 139), (9, 156), 
+                      (10, 173), (11, 190), (-100, 1)]) == 3
     print("Coding complete? Click 'Check' to earn cool rewards!")
