@@ -1,0 +1,71 @@
+<!-- Describe task in general -->
+
+<img class="for_info_only half" src="{{MEDIA}}dogs.jpg" style="float:left;max-height: 400px">
+
+<div class="story for_info_only">
+爆風のほこりが収まるとあなたは領内に入っていきました。
+しかし遠くから何やら鋭い遠吠えが聞こえてきました。
+近寄ってみるとそれが大きくて黒い毛むくじゃらの少数の犬の群れであることがわかりました。
+それらはむしろオオカミに近い獣のようであり、あなたの行く手をはばんでいました。
+かつて招かれざる訪問者から城を守っていた番犬の子孫が野生化したものと思われます。
+良い知らせはあなたはライフルを持っていることです。悪い知らせはそれほど多くの弾丸を持っていないことです。
+あなたは生き残るために最良の射撃位置を探す必要があります。
+各射撃の際に上手い位置取りをして下さい。
+</div>
+
+<p>
+犬たちの位置が入力値として与えられます。
+あなたの仕事は一度の射撃で最多の犬を殺せる直近の位置までの距離を計算することです。
+(同一の直線上にいる犬は一度の射撃で全て殺せます)
+あなたの開始時の座標は (0, 0) です。<br>
+<br>
+もし答えが 整数なら int型で返して下さい。
+その他の場合は四捨五入して小数点第 2位までの float型で返して下さい。<br>
+一直線上にあなたを挟んで前後に犬が存在する様な場合 (例: 犬 犬 あなた 犬) を想定する必要はありません。 このようなテストケースは存在しません。
+</p>
+
+<div class="for_info_only" style="text-align: center">
+    <img src="{{MEDIA}}new_placement.jpg" style="max-height: 300px">
+</div>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 犬たちの座標
+</p>
+
+<p>
+    <strong>出力: </strong> 最良の射撃位置までの距離
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+wildDogs([[7, 122], [8, 139], [9, 156], 
+          [10, 173], [11, 190], [-100, 1]]) == 0.18
+</pre>
+{% else %}
+<pre class="brush: python">
+wild_dogs([(7, 122), (8, 139), (9, 156), 
+           (10, 173), (11, 190), (-100, 1)]) == 0.18
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+部隊の配置や戦術の分析に利用できます。
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    2 <= amount of the dogs <= 15 <br>
+    0 <= distance to the right place <= 20
+</p>
