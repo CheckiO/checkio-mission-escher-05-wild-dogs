@@ -50,7 +50,7 @@ api.add_listener(
             "js": "wildDogs"
         },
         cover_code={
-            #'python-3': cover_codes.unwrap_args,
+            'python-3': cover_tuples,
             #'js-node': cover_codes.js_unwrap_args
         }
     ).on_ready)
