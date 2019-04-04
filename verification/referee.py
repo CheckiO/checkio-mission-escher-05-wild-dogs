@@ -29,20 +29,28 @@ checkio.referee.cover_codes
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io import CheckiOReferee
-from checkio.referees import cover_codes
+from checkio.referees import cover_codes, checkers
 
 from tests import TESTS
+
+# Make sure the input argument type is List[Tuple[int, int]] like clearly wanted.
+cover_tuples = '''
+def cover(func, arg):
+    coords = list(map(tuple, arg))
+    return func(coords)
+'''
 
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
+        checker=checkers.float_comparison(2),
         function_name={
             "python": "wild_dogs",
             "js": "wildDogs"
         },
         cover_code={
-            #'python-3': cover_codes.unwrap_args,
+            'python-3': cover_tuples,
             #'js-node': cover_codes.js_unwrap_args
         }
     ).on_ready)
